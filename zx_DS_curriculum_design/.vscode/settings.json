@@ -1,0 +1,10 @@
+{
+    "code-runner.runInTerminal": false,
+    "code-runner.clearPreviousOutput": true,
+    "code-runner.saveFileBeforeRun": true,
+    "code-runner.preserveFocus": false,
+    "code-runner.executorMap": {
+        "cpp": "powershell -ExecutionPolicy Bypass -File \"$workspaceRoot\\run_in_new_terminal.ps1\" \"$fullFileName\""
+    },
+    "terminal.integrated.cwd": "${workspaceFolder}"
+}

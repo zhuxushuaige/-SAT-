@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>百分号数独游戏</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta http-equiv="Content-Security-Policy" content="connect-src 'self' http://localhost:8080">
+</head>
+<body>
+    <div class="container">
+        <h1>百分号数独游戏（%-Sudoku）</h1>
+        <div id="difficulty-selection">
+            <button onclick="startGame('easy')">简单</button>
+            <button onclick="startGame('medium')">中等</button>
+            <button onclick="startGame('hard')">困难</button>
+        </div>
+        <div id="game-board" style="display: none;">
+            <div id="sudoku-grid"></div>
+            <div id="controls">
+                <div id="game-info">
+                    <div id="timer">时间: 00:00</div>
+                    <div id="errors">错误: 0/3</div>
+                </div>
+                <div id="game-actions">
+                    <button id="show-answer-btn" onclick="toggleAnswer()">显示答案</button>
+                    <button id="hint-btn" onclick="getHint()">提示</button>
+                </div>
+                <div id="number-pad"></div>
+            </div>
+        </div>
+        <div id="game-result" style="display: none;">
+            <h2 id="result-message"></h2>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
